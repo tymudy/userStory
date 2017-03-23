@@ -15,36 +15,26 @@ module.exports = function(grunt){
                 all:{
                     src:['Gruntfile.js','js/{,*/}*.js']
                 }
-            }/*,
+            },
             sass: {
                 dist: {
-                    files: {
+                    files: [{
+                        //'assets/css/test.css' : 'scss/partials/test.scss'
                         expand: true,
-                        cwd : 'scss/partials/',
-                        src : '*.scss',
+                        cwd : 'scss',
+                        src : '**/*.scss',
                         dest : 'assets/css/',
                         ext : '.css',
                         extDot : 'first'
-                    }
+                    }]
                 }
-            },*/
-          /* watch: {
-                default : {
-                    tasks : ['default']
-                },
-                livereload : {
-                    options : {
-                        livereload : true
-                    },
-                    files : ['assets']
-                }
-            }*/
+            }
     });
     
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['sass']);
 
 };

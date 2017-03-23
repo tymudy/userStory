@@ -7,20 +7,16 @@
     <title>userStory</title>
     <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-  </head>
-<body>
-
-    <h2>An unordered HTML list</h2>
-
-    <ul>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-    </ul>  
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="js/controllers/script.js"></script>
+    <script src="modules.js"></script>
+  </head>
+<body ng-app="renderView">  
+    <a ui-sref="header" ui-sref-active="active">Hello</a>
+    <ui-view></ui-view>
 </body>
 </html> 

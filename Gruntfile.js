@@ -14,17 +14,21 @@ module.exports = function(grunt){
                 }
             },
             sass: {
-                options: {
-                    sourceMap: true
-                },
                 dist: {
                     files: {
-                        'assets/css':'scss/partials/{,*/}*.scss'
+                        expand: true,
+                        cwd : 'scss/partials/',
+                        src : ['*.scss'],
+                        dest : '../../assets/css/',
+                        ext : '.css',
+                        extDot : 'first'
                     }
                 }
             }
     });
 
-grunt.registerTask('default', ['sass']);
+    grunt.loadNpmTasks('grunt-contrib-sass');
+
+    grunt.registerTask('default', ['sass']);
 
 }

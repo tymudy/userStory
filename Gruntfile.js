@@ -3,7 +3,7 @@
 module.exports = function(grunt){
 
     grunt.initConfig({
-
+            pkg: grunt.file.readJSON('package.json'),
             jshint:{
                 options:{
                     jshintrc:'.jshintrc',
@@ -19,7 +19,7 @@ module.exports = function(grunt){
                 },
                 dist: {
                     files: {
-                        'main.css': 'main.scss'
+                        'assets/css':'scss/partials/{,*/}*.scss'
                     }
                 }
             }

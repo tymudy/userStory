@@ -1,0 +1,22 @@
+{
+  "name": "userStory",
+  "homepage": "https://github.com/tymudy/userStory",
+  "description": "projects estimation",
+  "main": "index.html",
+  "authors": [
+    "STimea"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-css": "^3.3.7",
+    "angular": "^1.6.3",
+    "jquery": "^3.2.1"
+  }
+}

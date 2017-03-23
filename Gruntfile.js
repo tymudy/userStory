@@ -24,10 +24,17 @@ module.exports = function(grunt){
                         extDot : 'first'
                     }
                 }
+            },
+            watch: {
+                scripts : {
+                    tasks : ['default']
+                }
             }
     });
-
+    grunt.loadTasks('tasks');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['sass']);
 

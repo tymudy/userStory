@@ -1,8 +1,11 @@
-'using strict';
-
 module.exports = function(grunt){
 
+    'use strict';
+
+    require('load-grunt-tasks')(grunt); 
+
     grunt.initConfig({
+
             pkg: grunt.file.readJSON('package.json'),
             jshint:{
                 options:{
@@ -10,32 +13,38 @@ module.exports = function(grunt){
                     reporter:require('jshint-stylish')
                 },
                 all:{
-                    src:['Gruntfile.js','js/**/*.js']
+                    src:['Gruntfile.js','js/{,*/}*.js']
                 }
-            },
+            }/*,
             sass: {
                 dist: {
                     files: {
                         expand: true,
                         cwd : 'scss/partials/',
-                        src : ['*.scss'],
-                        dest : '../../assets/css/',
+                        src : '*.scss',
+                        dest : 'assets/css/',
                         ext : '.css',
                         extDot : 'first'
                     }
                 }
-            },
-            watch: {
-                scripts : {
+            },*/
+          /* watch: {
+                default : {
                     tasks : ['default']
+                },
+                livereload : {
+                    options : {
+                        livereload : true
+                    },
+                    files : ['assets']
                 }
-            }
+            }*/
     });
-    grunt.loadTasks('tasks');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['jshint']);
 
-}
+};

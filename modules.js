@@ -1,11 +1,9 @@
-var myApp = angular.module('renderView',['ui-router']);
+var myApp = angular.module('modules',['ui-router']);
 
 myApp.config(function($stateProvider){
-    var headerState = {
-        name: 'header',
-        url: '/header',
-        template: "<h3>Header generated with template!</h3>"
-    }
 
-    $stateProvider.state(headerState);
+    $stateProvider.state('header',{
+                                    url: '/header',
+                                    templateUrl: 'views/partials/page1.html'
+    });
 });

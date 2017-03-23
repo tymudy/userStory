@@ -10,7 +10,7 @@ module.exports = function(grunt){
                     reporter:require('jshint-stylish')
                 },
                 all:{
-                    src:['Gruntfile,js','js/{,*/}*.js']
+                    src:['Gruntfile.js','js/**/*.js']
                 }
             },
             sass: {

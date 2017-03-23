@@ -1,4 +1,4 @@
-var myApp = angular.module('modules',['ui-router']);
+var myApp = angular.module('myApp',['ui-router']);
 
 myApp.config(function($stateProvider){
 

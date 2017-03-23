@@ -1,0 +1,22 @@
+{
+  "name": "userstory",
+  "version": "1.0.0",
+  "description": "projects estimation",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tymudy/userStory.git"
+  },
+  "author": "STimea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tymudy/userStory/issues"
+  },
+  "homepage": "https://github.com/tymudy/userStory#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}

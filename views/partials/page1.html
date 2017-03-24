@@ -1,7 +1,17 @@
-<div>
-
-    <h3>Header</h3>
-
-    <p>Decription for header</p>
-
+<header>
+    <nav id="headerNav" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <a href="#"><h1></h1></a>
+          </div>
+        </div>
+   </nav>  
+</header>
+<div id="gridPosition" ng-controller="mainController">
+    <div id="mainContent" class="container">
+        <div class="row">
+            <button class="btn btn-success" >Add</button><br><br>
+            <div ui-grid="{ data: myData }" class="grid"></div>
+        </div>
+    </div>
 </div>

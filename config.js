@@ -1,7 +1,7 @@
 ( function ( ) {
     
     angular.module('myApp')
-            .config( routeConfig )
+            .config( routeConfig );
             //.run();
 
     routeConfig.$inject = ['$routeProvider', '$locationProvider','$stateProvider'];

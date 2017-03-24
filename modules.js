@@ -2,7 +2,8 @@
 
     angular.module( 'myApp', [
         'ui.router',
-        'ngRoute'
+        'ngRoute',
+        'ui.grid'
     ] );
     
 } )( );

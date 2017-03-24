@@ -1,9 +1,8 @@
-var myApp = angular.module('myApp',['ui.router']);
+( function( ) {
 
-myApp.config(function($stateProvider){
-
-    $stateProvider.state('header',{
-                                    url: '/header',
-                                    templateUrl: 'views/partials/page1.html'
-    });
-});
+    angular.module( 'myApp', [
+        'ui.router',
+        'ngRoute'
+    ] );
+    
+} )( );

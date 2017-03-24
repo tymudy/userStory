@@ -5,3 +5,6 @@
 #headerNav {
   background-color: midnightblue;
   height: 150px; }
+
+table, th {
+  border: 1px solid black; }

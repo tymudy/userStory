@@ -7,10 +7,10 @@
                     $scope.myData = [
                         {
                             "High level planning": "",
-                            "High level description / Epics": "",
-                            "As a ... [actor]": "",
-                            "I want to ... [action]": "",
-                            "So that (I can) ... [acceptance criteria]":"",
+                            "High level description / Epics": "Login ( menu1 )",
+                            "As a ... [actor]": "User",
+                            "I want to ... [action]": "Login",
+                            "So that (I can) ... [acceptance criteria]":"open the application",
                             "# of SP":""
                         }
                         

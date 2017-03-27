@@ -21,7 +21,8 @@
     "angular-ui-router": "1.0.0-beta.3",
     "angular-bootstrap": "~2.5.0",
     "angular-route": "~1.6.3",
-    "angular-ui-grid": "^4.0.2"
+    "angular-ui-grid": "^4.0.2",
+    "angular-translate": "^2.15.1"
   },
   "resolutions": {
     "angular": ">= 1.2.0"

@@ -16,24 +16,27 @@
                         $scope.myData = {};
 
                         /*get data from json file*/
-                       /* $http.get('/languages/en.json')
+                        $http.get('/languages/en.json')
                              .then( function (response) {
-                                    this.$scope.myData = response.data;     
-                        } );*/
+                                var myData = response.data;
+                                 $translate.instant('description');
+                                   // $scope.gridOptions.columnDefs.push(value);   
+                                 debugger;   
+                                
+                                /*{ field: 'description', displayName: $translate.instant('description'), width: 250},
+                                { field: 'actor', displayName: 'As a ... [actor]', width: 150},
+                                { field: 'action', displayName: 'I want to ... [action]', width: 180},
+                                { field: 'expectation', displayName: 'So that (I can) ... [acceptance criteria]', width:300},
+                                { field: 'sp', displayName: '# of SP', width: 90} 
+                                }) */
+                        } );
 
                         $scope.gridOptions = { 
                             enableCellSelection: true,
                             enableCellEditOnFocus: true,
                             cellEditableCondition: 'row.entity.editable',
                             data: [],
-                            columnDefs: [
-                                { field: 'High level planning', displayName: 'High level planning', width: 200},
-                                { field: 'High level description / epics', displayName: 'High level description / epics', width: 250},
-                                { field: 'As a ... [actor]', displayName: 'As a ... [actor]', width: 150},
-                                { field: 'I want to ... [action]', displayName: 'I want to ... [action]', width: 180},
-                                { field: 'So that (I can) ... [acceptance criteria]', displayName: 'So that (I can) ... [acceptance criteria]', width:300},
-                                { field: '# of SP', displayName: '# of SP', width: 90},
-                            ]
+                            columnDefs: []
                         };
 
                     }]);

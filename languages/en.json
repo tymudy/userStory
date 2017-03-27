@@ -1,0 +1,9 @@
+
+    {
+        "Col1": "High level planning", 
+        "Col2": "High level description / epics" ,
+        "Col3": "As a ... [actor]", 
+        "col4": "I want to ... [action]",
+        "Col5": "So that (I can) ... [acceptance criteria]" ,
+        "Col6": "# of SP" 
+    }

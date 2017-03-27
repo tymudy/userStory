@@ -9,5 +9,10 @@
 table, th {
   border: 1px solid black; }
 
-.row {
-  width: 100%; }
+#langBox {
+  position: relative;
+  float: right; }
+
+p {
+  color: black;
+}

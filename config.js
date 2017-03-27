@@ -30,26 +30,21 @@
     }
 
     function translateConfig ( $translateProvider ) {
-            
-            $translateProvider.translation ( 'en', {
-                'Col1': 'High level planning',
-                'Col2': 'High level description / epics',
-                'Col3': 'As a ... [actor]',
-                'Col4': 'I want to ... [action]',
-                'Col5': 'So that (I can) ... [acceptance criteria]',
-                'Col6': '# of SP'
-            });
 
-            $translateProvider.translation ( 'pt', {
-                'Col1': 'Planejamento de alto nivel',
-                'Col2': 'Descricao de alto nivel / epicos',
-                'Col3': 'Como ... [ator]',
-                'Col4': 'Eu quero ... [accao]',
-                'Col5': 'Para (que eu possa) ... [criteria de aceitacao]',
-                'Col6': '# de SP'
+            $translateProvider.useStaticFilesLoader({
+                prefix: '/languages/',
+                suffix: '.json'
             });
 
             $translateProvider.preferredLanguage('en');
+
+            /*$translateProvider.registerAvailableLanguageKeys ( ['en', 'pt'], {
+                'english' : 'en',
+                'portugues' : 'pt'
+            });
+
+            $translateProvider.uniformLanguageTag('bcp47');
+            $translateProvider.fallbackLanguage('en');*/
     }
 
 } )( );

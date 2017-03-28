@@ -2,25 +2,18 @@
     
     angular.module('myApp')
             .config( routeConfig )
-            //.config( translateConfig );
+            .config( translateConfig );
             //.run();
 
     routeConfig.$inject = ['$routeProvider', '$locationProvider','$stateProvider'];
     translateConfig.$inject = ['$translateProvider'];
 
     function routeConfig( $routeProvider, $locationProvider, $stateProvider) {
-
-        $stateProvider.state('header', {
-             url: '/',
-             templateUrl: 'views/partials/page1.html'
-        });
-
-        $routeProvider
-            .when(
-            '/', {
-                redirectTo: '/header'
-            })
-            
+          
+        $stateProvider.state('header',{
+            url: '/', 
+            templateUrl : 'views/partials/page1.html'
+            });
        $locationProvider.html5Mode({
            enable: true,
            requireBase: 'userStory'
@@ -32,19 +25,14 @@
     function translateConfig ( $translateProvider ) {
 
             $translateProvider.useStaticFilesLoader({
-                prefix: '/languages/',
+                prefix: 'languages/',
                 suffix: '.json'
             });
 
+            $translateProvider.useLocalStorage();
             $translateProvider.preferredLanguage('en');
+            $translateProvider.useSanitizeValueStrategy(null);
 
-            /*$translateProvider.registerAvailableLanguageKeys ( ['en', 'pt'], {
-                'english' : 'en',
-                'portugues' : 'pt'
-            });
-
-            $translateProvider.uniformLanguageTag('bcp47');
-            $translateProvider.fallbackLanguage('en');*/
     }
 
 } )( );

@@ -1,10 +1,7 @@
-[
-    {
-    "Planejamento de alto nivel" : "",
-    "Descricao de alto nivel / epicos" : "",
-    "Como ... [ator]" : "",
-    "Eu quero ... [accao]" : "",
-    "Para (que eu possa) ... [criteria de aceitacao]" : "",
-    "# de SP" : ""
-    }
-]
+{
+    "description": "Descricao de alto nivel / epicos" ,
+    "actor": "Como ... [ator]", 
+    "action": "Eu quero ... [accao]",
+    "expectation": "Para (que eu possa) ... [criteria de aceitacao]" ,
+    "sp": "# de SP" 
+}

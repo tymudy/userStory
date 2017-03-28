@@ -1,4 +1,3 @@
-
 ( function () {
     
     angular.module('myApp')
@@ -9,18 +8,6 @@
                     function ($scope, $translate, $http, ModalService) {
                         $scope.langs = ['en', 'pt'];
                         $scope.data = "";   
-
-                        $scope.show = function () {
-                             ModalService.showModal({
-                                template: '<h1>Modal</h1>',
-                                controller: "ModalController"
-                            }).then(function(modal) {
-                                modal.element.modal();
-                                modal.close.then(function(result) {
-                                    $scope.message = "You said " + result;
-                                });
-                            });
-                        }
 
                         /*get table header from json file*/
                      /*  $http.get('/languages/'+$scope.data+'.json')
@@ -38,24 +25,37 @@
                                 });        
                          } );*/
 
-                         $scope.gridOptions = {
-                            cellFilter: true, 
+                   
+                        $scope.gridOptions = {
                             enableSorting: false,
                             data: [],
                             columnDefs: [
-                                { field: 'description' , dispayName: $translate.instant('description')} ,
+                                { field: 'description' , displayName: $translate.instant('description')} ,
                                 { field: 'actor', displayName: $translate.instant('actor')},
-                                { field: 'action', dispayName: $translate.instant('action')},
-                                { field: 'expectation', dispayName: $translate.instant('expectation')},
-                                { field: "sp", dispayName: $translate.instant('sp')}
+                                { field: 'action', displayName: $translate.instant('action')},
+                                { field: 'expectation', displayName: $translate.instant('expectation')},
+                                { field: "sp", displayName: $translate.instant('sp')}
 
                             ]
-                         };
-
+                        }
                          
                         $scope.changeLanguage = function () {
                             $translate.use($scope.data);
                         };
+
+                        
+                        $scope.show = function () {
+                             ModalService.showModal({
+                                templateUrl: 'modal.html',
+                                controller: "ModalController"
+                            }).then(function(modal) {
+                                modal.element.modal();
+                                modal.close.then(function(result) {
+                                    $scope.message = "You said " + result;
+                                });
+                            });
+                        }
+
 
                     }])
             .controller('ModalController', function($scope, close) {

@@ -5,8 +5,7 @@
             <div class="container-fluid">
                 <div class="navbar-brand">
                     <div id="langBox">
-                        <select name="repeatSelect" id="repeatSelect" data-ng-options="l as (l | translate) for l in langs" data-ng-model="data" data-ng-change="changeLanguage()"></select>
-                        <p> data: {{data}}</p>
+                        <select name="repeatSelect" id="repeatSelect" data-ng-options="l for l in langs" data-ng-model="data" data-ng-change="changeLanguage()"></select>
                     </div>
                 </div>
             </div>
@@ -27,14 +26,20 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Yes or No?</h4>
+                <h4 class="modal-title">Add new data</h4>
               </div>
               <div class="modal-body">
-                <p>It's your call...</p>
+                <form>
+                    <label  class="control-label" translate>description</label><input class="form-control" type="text"><br><br>
+                    <label  class="control-label" translate>actor</label><input class="form-control" type="text"><br><br>
+                    <label  class="control-label" translate>action</label><input class="form-control" type="text"><br><br>
+                    <label  class="control-label" translate>expectation</label><input class="form-control" type="text"><br><br>
+                    <label  class="control-label" translate>sp</label><input class="form-control" type="text"><br><br>
+                </form>
               </div>
               <div class="modal-footer">
-                <button type="button" ng-click="close('No')" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" ng-click="close('Yes')" class="btn btn-primary" data-dismiss="modal">Save</button>
+                <button type="button" ng-click="close('Cancel')" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" ng-click="close('Save')" class="btn btn-primary" data-dismiss="modal">Save</button>
               </div>
             </div>
           </div>

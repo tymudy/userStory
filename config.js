@@ -3,22 +3,29 @@
     angular.module('myApp')
             .config( routeConfig )
             .config( translateConfig );
-            //.run();
 
-    routeConfig.$inject = ['$routeProvider', '$locationProvider','$stateProvider'];
+    routeConfig.$inject = ['$routeProvider', '$locationProvider'];
     translateConfig.$inject = ['$translateProvider'];
 
-    function routeConfig( $routeProvider, $locationProvider, $stateProvider) {
+    function routeConfig( $routeProvider, $locationProvider) {
           
-        $stateProvider.state('header',{
-            url: '/', 
-            templateUrl : 'views/partials/page1.html'
+        $routeProvider
+            .when('/',{
+                templateUrl : 'views/partials/page1.html'
+            })
+            .when('/header',{
+                templateUrl : 'views/partials/testpage.html'
+            }).
+            when('/errorPage', {
+                templateUrl:'views/partials/errorpage.html',
+            })
+            .otherwise({
+                redirectTo: "errorPage"
             });
-       $locationProvider.html5Mode({
-           enable: true,
-           requireBase: 'userStory'
-        });
-        $locationProvider.hashPrefix('!');
+        
+       $locationProvider.html5Mode(true)
+                        .hashPrefix('!');
+
 
     }
 

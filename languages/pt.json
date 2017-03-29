@@ -3,5 +3,7 @@
     "actor": "Como ... [ator]", 
     "action": "Eu quero ... [accao]",
     "expectation": "Para (que eu possa) ... [criteria de aceitacao]" ,
-    "sp": "# de SP" 
+    "sp": "# de SP",
+    "edit": "Editar",
+    "delete": "Eliminar" 
 }

@@ -1,18 +1,18 @@
-.grid{
-    width: 100%;
-    height: 1500px;
-}
+.grid {
+  width: 100%;
+  height: 1500px; }
 
 #headerNav {
-    background-color: midnightblue;
-    height:150px;
-}
+  background-color: midnightblue;
+  height: 150px; }
 
 table, th {
-    border: 1px solid black;
-}
+  border: 1px solid black; }
 
 #langBox {
-   position: absolute;
-   float: right;
+  position: relative;
+  float: right; }
+
+p {
+  color: black;
 }

@@ -1,0 +1,16 @@
+[
+    {
+            "description": "Login ( menu1 )" ,
+            "actor": "User", 
+            "action": "Login",
+            "expectation": "Open the application" ,
+            "sp": "10" 
+    },
+    {
+            "description": "Startup ( menu2 )" ,
+            "actor": "Account Manager User", 
+            "action": "Account manager menu to be open after I log in",
+            "expectation": "See my data" ,
+            "sp": "20" 
+    }
+]

@@ -2,45 +2,41 @@
     
     angular.module('myApp')
             .controller('mainController', ['$scope',
-                                           '$rootScope', 
-                                           '$translate', 
-                                           '$http',
-                                           'ModalService', 
-                    function ($scope, $rootScope, $translate, $http, ModalService) {
+                                           '$translate',  
+                    function ( $scope, $translate ) {
+
                         $scope.langs = ['en', 'pt'];
-                        $scope.data = ""; 
+                        $scope.data = "en"; 
                         $scope.newEstimation = {};  
-                        $scope.clickedestimation = {};
+
                  
                         $scope.gridOptions = {
                             enableSorting: false,
                             columnDefs: [
-                                { field: 'description' , displayName: $translate.instant('description'), width: 250} ,
-                                { field: 'actor', displayName: $translate.instant('actor'), width: 180},
-                                { field: 'action', displayName: $translate.instant('action'), width: 180},
-                                { field: 'expectation', displayName: $translate.instant('expectation'), width: 300},
-                                { field: "sp", displayName: $translate.instant('sp'), width: 80},
-                                { field: "edit", displayName: $translate.instant('edit'), width: 80, cellTemplate:'<div class="grid-action-cell">'+'<button type="button" id="btn-resize" class="btn btn-info btn-xs" data-toggle="modal" data-target="#editModal" data-ng-click="edit(estimation)">Edit</button></div>'},
-                                { field: "delete", displayName: $translate.instant('delete'), cellTemplate:'<div class="grid-action-cell">'+'<button type="button" id="btn-resize" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteModal" data-ng-click="delete(estimation)"">Delete</button></div>'}
+                                { field: 'description' , displayName: $translate.instant('description'), width: 250, headerCellFilter: "translate"} ,
+                                { field: 'actor', displayName: $translate.instant('actor'), width: 180, headerCellFilter: "translate"},
+                                { field: 'action', displayName: $translate.instant('action'), width: 180, headerCellFilter: "translate"},
+                                { field: 'expectation', displayName: $translate.instant('expectation'), width: 300, headerCellFilter: "translate"},
+                                { field: "sp", displayName: $translate.instant('sp'), width: 80, headerCellFilter: "translate"},
+                                { field: "edit", displayName: $translate.instant('edit'), cellTemplate:'/views/buttons/edit.html'},
+                                { field: "delete", displayName: $translate.instant('delete'), cellTemplate:'/views/buttons/delete.html'}
                             ]
                         }
                         
                         $scope.gridHeader = $scope.gridOptions.columnDefs.slice(0,-2);
-                        $scope.gridData = $scope.gridOptions.columnDefs.data;
 
-                        $scope.saveEstimation = function ( ) {
-                             // $scope.gridOptions.data =[];
+                        $scope.addEstimation = function ( ) {
                              $scope.gridOptions.data.push($scope.newEstimation);
                              $scope.newEstimation = {}
                         }
 
-                        $scope.edit = function ( estimation ) {
-                            console.log(estimation);
+                        $scope.editEstimation = function (index){
+    
                         }
 
-                        $scope.delete = function ( ) {
-                            
-                        } 
+                        $scope.deleteEstimation = function (index){
+    
+                        }
 
                         $scope.changeLanguage = function ( ) {
                             $translate.use($scope.data);

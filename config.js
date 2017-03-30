@@ -11,16 +11,13 @@
           
         $routeProvider
             .when('/',{
-                templateUrl : 'views/partials/page1.html'
+                templateUrl : 'views/partials/main.html'
             })
-            .when('/header',{
-                templateUrl : 'views/partials/testpage.html'
-            }).
-            when('/errorPage', {
-                templateUrl:'views/partials/errorpage.html',
+            .when('/errorPage', {
+                templateUrl:'views/partials/errorPage.html',
             })
             .otherwise({
-                redirectTo: "errorPage"
+                redirectTo: "/errorPage"
             });
         
        $locationProvider.html5Mode(true)

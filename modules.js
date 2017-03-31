@@ -9,8 +9,8 @@
         'pascalprecht.translate',
         'ngSanitize',
         'ngAnimate',
-        'ngTouch',
-        'angularModalService'
+        'ui.bootstrap',
+        'ngTouch'
     ] );
     
 } )( );

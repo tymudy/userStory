@@ -1,4 +1,4 @@
-<div data-ng-controller="mainController">
+<div data-ng-controller="mainController as vm">
    
     <!-- Header -->
     <header>
@@ -14,8 +14,8 @@
         <div id="mainContent" class="container">
             <div class="row">
                 <button type="button" class="btn btn-primary btn-lg" 
-                        data-ng-click="showModal()" translate>addBtn</button><br><br>
-                <div data-ui-grid="gridOptions" class="grid"></div>
+                        data-ng-click="showAddModal()" translate>addBtn</button><br><br>
+                <div data-ui-grid="vm.gridOptions" class="grid" data-ui-grid-edit></div>
             </div>  
         </div>
     </div>

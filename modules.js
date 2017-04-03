@@ -10,7 +10,9 @@
         'ngSanitize',
         'ngAnimate',
         'ui.bootstrap',
-        'ngTouch'
+        'ngTouch',
+        'ui.grid.edit',
+        'schemaForm'
     ] );
     
 } )( );

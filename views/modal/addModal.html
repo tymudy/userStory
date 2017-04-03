@@ -4,7 +4,7 @@
     <div class="modal-header">
         <button type="button" class="close" aria-label="Close"
             data-ng-click="onClose()"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add new estimation</h4>
+        <h4 class="modal-title" id="myModalLabel" translate>addTitle</h4>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
@@ -26,9 +26,9 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default"
-                data-ng-click="onCancel()"> Cancel</button>
+                data-ng-click="onCancel()" translate>cancelBtn</button>
         <button type="button" 
-                data-ng-click="addEstimation()" class="btn btn-primary">Save</button>
+                data-ng-click="addEstimation()" class="btn btn-primary" translate>saveBtn</button>
     </div>
 
 </div>

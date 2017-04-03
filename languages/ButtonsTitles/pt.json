@@ -1,3 +1,10 @@
 {
-        "addBtn": "Adicionar"         
+        "addBtn": "Adicionar", 
+        "saveBtn": "Salvar",
+        "cancelBtn": "Cancelar",
+        "yesBtn": "Sim",
+        "noBtn": "Nao",
+        "addTitle": "Adicionar uma nova estimacao",
+        "editTitle": "Editar estimacao",
+        "deleteTitle": "Eliminar estimacao ?"        
 }

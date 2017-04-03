@@ -1,3 +1,11 @@
 {
-        "addBtn": "Add"         
+        "addBtn": "Add", 
+        "saveBtn": "Save",
+        "cancelBtn": "Cancel",
+        "yesBtn": "Yes",
+        "noBtn": "No",
+        "addTitle": "Add new estimation",
+        "editTitle": "Edit estimation",
+        "deleteTitle": "Delete estimation ?"
+
 }

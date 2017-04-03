@@ -3,25 +3,17 @@
     angular.module('myApp')
            .controller('deleteController', addController);
 
-           addController.$inject = ['$scope', 'gridOptionsService','$uibModalInstance'];
+           addController.$inject = ['$uibModalInstance', 'grid', 'row'];
 
-           function addController ( $scope, gridOptionsService, $uibModalInstance) {
+           function deleteController ( $uibModalInstance, grid, row ) {
+               
+               var vm = this;
 
-                $scope.gridOptions = gridOptionsService.getGridOptions();
-                
-                $scope.deleteEstimation = function ( event ) {
-                    gridOptionsService.delGridOptions( event );
-                    $uibModalInstance.dismiss();
-                }
+               vm.del = del;
 
-                $scope.onCancel = function () {
-                    $uibModalInstance.dismiss();
-                }
-
-                $scope.onClose = function () {
-                    $uibModalInstance.close();
-                }
- 
+               function del ( ) {
+                   
+               }
             }    
 
 })();

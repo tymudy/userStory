@@ -1,4 +1,7 @@
-<div class="grid-action-cell">
+<!-- Grid delete action  button -->
+<div class="ui-grid-cell-contents">
     <button type="button" id="btn-resize" class="btn btn-info btn-xs" 
-        data-ng-click="showModal()">Edit</button>
+        data-ng-click="grid.appScope.vm.editRow(grid, row)">Edit</button>
 </div>
+
+<!-- parent scope of the ui.grid element is addigned to a property in $scope.grid named appScope -->

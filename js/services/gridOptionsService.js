@@ -1,9 +1,16 @@
 ( function () {
 
     angular.module('myApp')
-           .service('gridOptionsService', function () {
+           .service('gridOptionsService', gridOptionsService);
+           
+           gridOptionsService.$inject = ['$translate', 'estimationSchema'];
 
-                this.gridOptions = {};
+           function gridOptionsService ( $translate, estimationSchema ) {
+
+               this.gridOptions = {
+                    enableSorting: false,
+                    columnDefs: estimationSchema.columnDefs
+                }
 
                 this.setGridOptions = function ( gridOptions ) {
                         this.gridOptions = gridOptions;
@@ -20,6 +27,6 @@
                 this.delGridOptions = function ( gridRow ) {
                     this.gridOptions.data.pop( gridRow )
                 }
-           });
+           };
 
 })();

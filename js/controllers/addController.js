@@ -3,9 +3,9 @@
     angular.module('myApp')
            .controller('addController', addController);
 
-           addController.$inject = ['$scope', 'gridOptionsService','$uibModalInstance'];
+           addController.$inject = ['$scope', '$translate', 'gridOptionsService','$uibModalInstance'];
 
-           function addController ( $scope, gridOptionsService, $uibModalInstance) {
+           function addController ( $scope, $translate, gridOptionsService, $uibModalInstance) {
 
                 $scope.storyPoints = ['0','0.5','1','2','3','5','8','13','20','40','100'];
                 $scope.sp="";
@@ -31,7 +31,7 @@
                 }
 
                 $scope.onCancel = function () {
-                    $uibModalInstance.dismiss();
+                    $uibModalInstance.dismiss('cancel');
                 }
 
                 $scope.onClose = function () {

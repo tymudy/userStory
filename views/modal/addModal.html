@@ -12,7 +12,8 @@
                  data-ng-repeat="header in gridHeader">
                     <div class="col-sm-12">
                         <input class="form-control" type="text" placeholder="header.displayName"
-                               data-ng-click="changeContent($event)"
+                               data-ng-click="hidePlaceholder($event)"
+                               data-ng-blur="showPlaceholder()"
                                data-ng-model="newEstimation[header.field]">
                     </div>
             </div>

@@ -1,9 +1,18 @@
 {
-        "description": "High level description / epics" ,
+       "description": "High level description / epics" ,
         "actor": "As a ... [actor]", 
         "action": "I want to ... [action]",
         "expectation": "So that (I can) ... [acceptance criteria]" ,
         "sp": "# of SP",
         "edit": "Edit",
-        "delete": "Delete" 
+        "delete": "Delete",
+        "addBtn": "Add", 
+        "saveBtn": "Save",
+        "cancelBtn": "Cancel",
+        "yesBtn": "Yes",
+        "noBtn": "No",
+        "addTitle": "Add new estimation",
+        "editTitle": "Edit estimation",
+        "deleteTitle": "Delete estimation ?"
+
 }

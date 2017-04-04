@@ -2,12 +2,10 @@
     
     angular.module('myApp')
             .config( routeConfig )
-            .config( translateConfig )
-            .config( translateBtnsAndTitles);
+            .config( translateConfig );
 
     routeConfig.$inject = ['$routeProvider', '$locationProvider'];
     translateConfig.$inject = ['$translateProvider'];
-    translateBtnsAndTitles.$inject =  ['$translateProvider'];
 
     function routeConfig( $routeProvider, $locationProvider) {
           
@@ -39,18 +37,6 @@
             $translateProvider.preferredLanguage('en');
             $translateProvider.useSanitizeValueStrategy(null);
 
-    }
-
-    function translateBtnsAndTitles ( $translateProvider ) {
-
-            $translateProvider.useStaticFilesLoader({
-                    prefix: 'languages/ButtonsTitles/',
-                    suffix: '.json'
-            });
-
-            $translateProvider.useLocalStorage();
-            $translateProvider.preferredLanguage('en');
-            $translateProvider.useSanitizeValueStrategy(null);
     }
 
 } )( );

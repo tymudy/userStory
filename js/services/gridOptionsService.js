@@ -7,8 +7,11 @@
 
            function gridOptionsService ( $translate, estimationSchema ) {
 
+
+
                this.gridOptions = {
                     enableSorting: false,
+              
                     columnDefs: estimationSchema.columnDefs
                 }
 

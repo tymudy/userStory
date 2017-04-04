@@ -1,9 +1,9 @@
 ( function () {
 
     angular.module('myApp')
-           .controller('deleteController', addController);
+           .controller('deleteController', deleteController);
 
-           addController.$inject = ['$uibModalInstance', 'grid', 'row'];
+           deleteController.$inject = ['$uibModalInstance', 'grid', 'row'];
 
            function deleteController ( $uibModalInstance, grid, row ) {
                

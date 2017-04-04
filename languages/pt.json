@@ -13,5 +13,6 @@
         "expectation": "Para (que eu possa) ... [criteria de aceitacao]" ,
         "sp": "# de SP",
         "edit": "Editar",
-        "delete": "Eliminar"       
+        "delete": "Eliminar",
+        "storyPoint": "Pontos da historia"       
 }

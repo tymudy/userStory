@@ -1,5 +1,5 @@
 {
-       "description": "High level description / epics" ,
+        "description": "High level description / epics" ,
         "actor": "As a ... [actor]", 
         "action": "I want to ... [action]",
         "expectation": "So that (I can) ... [acceptance criteria]" ,
@@ -13,6 +13,6 @@
         "noBtn": "No",
         "addTitle": "Add new estimation",
         "editTitle": "Edit estimation",
-        "deleteTitle": "Delete estimation ?"
-
+        "deleteTitle": "Delete estimation ?",
+        "storyPoint": "Story points"
 }

@@ -5,11 +5,11 @@
             data-ng-click="$close()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel" translate>editTitle</h4>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" translate>
         <form sf-schema="vm.schema" sf-form="vm.form" sf-model="vm.entity"></form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-ng-click="$close()">Cancel</button>
-        <button type="button" class="btn btn-primary" data-ng-click="vm.save()">Save</button>
+        <button type="button" class="btn btn-default" data-ng-click="$close()" translate>cancelBtn</button>
+        <button type="button" class="btn btn-primary" data-ng-click="vm.save()" translate>saveBtn</button>
     </div>
 </div>

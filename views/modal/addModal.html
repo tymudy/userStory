@@ -11,7 +11,7 @@
             <div class="form-group" 
                  data-ng-repeat="header in gridHeader">
                     <div class="col-sm-12">
-                        <input class="form-control" type="text" placeholder="header.displayName"
+                        <input class="form-control" type="text" placeholder="{{header.displayName | translate}}"
                                data-ng-click="hidePlaceholder($event)"
                                data-ng-blur="showPlaceholder()"
                                data-ng-model="newEstimation[header.field]">
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-12">
-                    <div class="form-control"><label class="label-control" style="margin-right: 20px;">Story Points</label><story-point></story-point></div>
+                    <div class="form-control"><label class="label-control" style="margin-right: 20px;" translate>storyPoint</label><story-point></story-point></div>
                 </div>
             </div>
         </form>
